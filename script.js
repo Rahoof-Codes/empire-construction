@@ -1,5 +1,4 @@
   const CONFIG = {
-      loaderDelay:    1800,  // ms before loader hides
       typingSpeed:    90,    // ms per character
       typingPause:    1600,  // ms before deleting
       deleteSpeed:    50,    // ms per delete
@@ -44,18 +43,12 @@
       el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
     });
 
-        /* ================================================
-       PAGE LOADER (Removed) - INIT ANIMATIONS
-       ================================================ */
-    window.addEventListener('load', () => {
-      // Trigger hero animations immediately after page load
-      setTimeout(startTyping, 300);
-    });
-
-
     /* ================================================
        TYPING EFFECT (Hero headline)
        ================================================ */
+    window.addEventListener('load', () => {
+      startTyping();
+    });
     const typingLine   = document.getElementById('typing-line');
     const typingCursor = document.getElementById('typing-cursor');
     let wordIdx = 0, charIdx = 0, isDeleting = false;
