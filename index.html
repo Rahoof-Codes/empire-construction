@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMPIRE Construction Co.</title>
+
+  <!-- Google Fonts: Bebas Neue (display) + Barlow (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300&family=Barlow+Condensed:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+
+  <!-- ================================================
+       CUSTOM CURSOR
+       ================================================ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ================================================
+       PAGE LOADER
+       ================================================ -->
+  <div id="loader">
+    <div class="loader-chevrons">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="loader-logo">EMPIRE<span> CO.</span></div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar"></div>
+    </div>
+    <div class="loader-label">Initializing Site</div>
+  </div>
+
+  <!-- ================================================
+       MOBILE NAV OVERLAY
+       ================================================ -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#hero"     onclick="closeMobileNav()">Home</a>
+    <a href="#about"    onclick="closeMobileNav()">About</a>
+    <a href="#services" onclick="closeMobileNav()">Services</a>
+    <a href="#projects" onclick="closeMobileNav()">Projects</a>
+    <a href="#contact"  onclick="closeMobileNav()">Contact</a>
+  </nav>
+
+  <!-- ================================================
+       STICKY HEADER
+       ================================================ -->
+  <header id="site-header">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">EMPIRE<span> CONSTRUCTION</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================================================
+       HERO SECTION
+       ================================================ -->
+  <section id="hero">
+    <div class="hero-bg-blob hero-bg-blob-1" data-parallax="0.15"></div>
+    <div class="hero-bg-blob hero-bg-blob-2" data-parallax="0.1"></div>
+    <div class="hero-grid-lines"></div>
+
+    <!-- Floating shapes -->
+    <div class="hero-float hero-float-1"></div>
+    <div class="hero-float hero-float-2"></div>
+    <div class="hero-float hero-float-3"></div>
+    <div class="hero-float hero-float-4"></div>
+    <div class="hero-float hero-float-5"></div>
+    <div class="hero-float hero-float-6"></div>
+
+    <div class="container hero-content">
+      <p class="hero-eyebrow">Est. 2006 — Award Winning Firm</p>
+      <h1 class="hero-headline">
+        <span class="line-1" id="typing-line"></span><span class="typing-cursor" id="typing-cursor"></span><br>
+        <span class="line-2">BUILT TO LAST</span>
+      </h1>
+      <p class="hero-sub">
+        From groundbreaking residential developments to landmark commercial structures — we engineer excellence into every foundation, beam, and skyline.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn btn-primary" onclick="scrollToSection('projects')">
+          View Our Work
+          <span>→</span>
+        </button>
+        <button class="btn btn-outline" onclick="scrollToSection('contact')">
+          Request a Quote
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-mouse-dot"></div></div>
+      <span>Scroll</span>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stats-inner container">
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">500+</div>
+          <div class="hero-stat-label">Projects<br>Completed</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">18</div>
+          <div class="hero-stat-label">Years of<br>Experience</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">42</div>
+          <div class="hero-stat-label">Industry<br>Awards</div>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat-item">
+          <div class="hero-stat-num">98%</div>
+          <div class="hero-stat-label">Client<br>Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       ABOUT SECTION
+       ================================================ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Visual Column -->
+        <div class="about-visual reveal">
+          <div class="about-accent-box"></div>
+          <div class="about-img-frame">
+            <img
+              src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
+              alt="Empire Construction workers on site"
+              style="width:100%;height:100%;object-fit:cover;display:block;"
+            />
+          </div>
+          <div class="about-accent-box-2"></div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="about-text">
+          <p class="section-label reveal">Who We Are</p>
+          <h2 class="section-title reveal reveal-delay-1">
+            BUILDING <span class="highlight">TOMORROW'S</span> SKYLINE TODAY
+          </h2>
+          <p class="about-body reveal reveal-delay-2">
+            Empire Construction has been shaping cityscapes for over 18 years. We combine precision engineering with bold architectural vision — delivering projects on time, on budget, and beyond expectation. Our team of 200+ specialists brings unrivaled craftsmanship to every pour, weld, and rivet.
+          </p>
+          <p class="about-body reveal reveal-delay-2" style="margin-top:-20px">
+            From residential high-rises to sprawling commercial complexes, our commitment to structural integrity and sustainable building practices has earned us recognition across three continents.
+          </p>
+
+          <div class="counters-grid">
+            <div class="counter-card reveal reveal-delay-1">
+              <div class="counter-number">
+                <span class="counter" data-target="500" data-suffix="+">0</span>
+              </div>
+              <div class="counter-label">Projects Completed</div>
+            </div>
+            <div class="counter-card reveal reveal-delay-2">
+              <div class="counter-number">
+                <span class="counter" data-target="18" data-suffix="yrs">0</span>
+              </div>
+              <div class="counter-label">Years in Business</div>
+            </div>
+            <div class="counter-card reveal reveal-delay-3">
+              <div class="counter-number">
+                <span class="counter" data-target="200" data-suffix="+">0</span>
+              </div>
+              <div class="counter-label">Team Members</div>
+            </div>
+            <div class="counter-card reveal reveal-delay-4">
+              <div class="counter-number">
+                <span class="counter" data-target="42" data-suffix="">0</span>
+              </div>
+              <div class="counter-label">Industry Awards</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       SERVICES SECTION
+       ================================================ -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header">
+        <div>
+          <p class="section-label reveal" style="--dark: rgba(255,255,255,0.6)">What We Build</p>
+          <h2 class="section-title reveal reveal-delay-1">OUR <span class="highlight">CORE</span><br>SERVICES</h2>
+        </div>
+        <p class="services-tagline reveal reveal-delay-2">
+          Every project is a testament to precision engineering, visionary design, and uncompromising quality.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Card 1 -->
+        <div class="service-card tilt-card reveal">
+          <div class="service-card-shine"></div>
+          <div class="service-num">01</div>
+          <div class="service-icon">🏗️</div>
+          <h3 class="service-title">Commercial Construction</h3>
+          <p class="service-desc">From office towers to retail complexes — we deliver large-scale commercial builds with seamless project management and zero compromise on safety.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="service-card tilt-card reveal reveal-delay-1">
+          <div class="service-card-shine"></div>
+          <div class="service-num">02</div>
+          <div class="service-icon">🏠</div>
+          <h3 class="service-title">Residential Developments</h3>
+          <p class="service-desc">Luxury condominiums, gated communities, and custom-built homes crafted with meticulous attention to detail and bespoke finishes.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="service-card tilt-card reveal reveal-delay-2">
+          <div class="service-card-shine"></div>
+          <div class="service-num">03</div>
+          <div class="service-icon">🌉</div>
+          <h3 class="service-title">Civil Infrastructure</h3>
+          <p class="service-desc">Bridges, highways, tunnels, and public utilities — our civil engineering division tackles the most challenging structural projects imaginable.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="service-card tilt-card reveal reveal-delay-1">
+          <div class="service-card-shine"></div>
+          <div class="service-num">04</div>
+          <div class="service-icon">🔧</div>
+          <h3 class="service-title">Renovation & Retrofit</h3>
+          <p class="service-desc">Breathing new life into existing structures — seismic upgrades, historic restorations, and full-scale interior transformations done right.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="service-card tilt-card reveal reveal-delay-2">
+          <div class="service-card-shine"></div>
+          <div class="service-num">05</div>
+          <div class="service-icon">📐</div>
+          <h3 class="service-title">Design & Engineering</h3>
+          <p class="service-desc">In-house architectural and structural engineering teams working in concert to bring your vision from schematic to finished structure.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="service-card tilt-card reveal reveal-delay-3">
+          <div class="service-card-shine"></div>
+          <div class="service-num">06</div>
+          <div class="service-icon">🌿</div>
+          <h3 class="service-title">Green Building</h3>
+          <p class="service-desc">LEED-certified construction practices, energy-efficient design, and sustainable material sourcing for a built environment that respects the planet.</p>
+          <a class="service-arrow">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROJECTS GALLERY
+       ================================================ -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header">
+        <p class="section-label reveal">Our Portfolio</p>
+        <h2 class="section-title reveal reveal-delay-1">LANDMARK <span class="highlight">PROJECTS</span></h2>
+        <div class="projects-filter reveal reveal-delay-2">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Commercial</button>
+          <button class="filter-btn">Residential</button>
+          <button class="filter-btn">Civil</button>
+          <button class="filter-btn">Renovation</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 — LARGE -->
+        <div class="project-card reveal">
+          <div class="project-bg proj-bg-1">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1000&q=80" alt="Meridian Tower Complex" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+          </div>
+          <div class="project-view-icon">↗</div>
+          <div class="project-overlay">
+            <span class="project-tag">Commercial • 2023</span>
+            <h3 class="project-title">MERIDIAN TOWER COMPLEX</h3>
+            <p class="project-meta">48-storey mixed-use development • Downtown Financial District</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-bg proj-bg-2">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Hearthstone Villas" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+          </div>
+          <div class="project-view-icon">↗</div>
+          <div class="project-overlay">
+            <span class="project-tag">Residential • 2022</span>
+            <h3 class="project-title">HEARTHSTONE VILLAS</h3>
+            <p class="project-meta">72-unit luxury residential complex</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-bg proj-bg-3">
+            <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80" alt="Northspan Bridge" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+          </div>
+          <div class="project-view-icon">↗</div>
+          <div class="project-overlay">
+            <span class="project-tag">Civil • 2023</span>
+            <h3 class="project-title">NORTHSPAN BRIDGE</h3>
+            <p class="project-meta">400m cable-stayed bridge • River Crossing</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-bg proj-bg-4">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Arts District Lofts renovation" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+          </div>
+          <div class="project-view-icon">↗</div>
+          <div class="project-overlay">
+            <span class="project-tag">Renovation • 2021</span>
+            <h3 class="project-title">ARTS DISTRICT LOFTS</h3>
+            <p class="project-meta">Historic warehouse conversion • 18,000 sq ft</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-bg proj-bg-5">
+            <img src="https://images.unsplash.com/photo-1518005068251-37900150dfca?w=800&q=80" alt="Evergreen Campus green building" style="width:100%;height:100%;object-fit:cover;display:block;"/>
+          </div>
+          <div class="project-view-icon">↗</div>
+          <div class="project-overlay">
+            <span class="project-tag">Green Build • 2024</span>
+            <h3 class="project-title">EVERGREEN CAMPUS</h3>
+            <p class="project-meta">LEED Platinum certified • Corporate HQ</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       PROCESS SECTION
+       ================================================ -->
+  <section id="process">
+    <div class="container">
+      <div class="process-header">
+        <p class="section-label reveal">How We Work</p>
+        <h2 class="section-title reveal reveal-delay-1">OUR <span class="highlight">PROVEN</span> PROCESS</h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step reveal">
+          <div class="step-num">01</div>
+          <h3 class="step-title">Discovery & Planning</h3>
+          <p class="step-desc">We begin with deep consultation — understanding your vision, site conditions, regulatory requirements, and budget constraints.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-1">
+          <div class="step-num">02</div>
+          <h3 class="step-title">Design & Engineering</h3>
+          <p class="step-desc">Our in-house architects and structural engineers develop detailed plans, renderings, and full technical specifications.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-2">
+          <div class="step-num">03</div>
+          <h3 class="step-title">Construction</h3>
+          <p class="step-desc">Ground-up execution with daily reporting, on-site quality control, and transparent communication at every phase.</p>
+        </div>
+        <div class="process-step reveal reveal-delay-3">
+          <div class="step-num">04</div>
+          <h3 class="step-title">Handover & Support</h3>
+          <p class="step-desc">Full commissioning, documentation handover, and a dedicated 24-month post-completion support warranty on all builds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       CONTACT SECTION
+       ================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p class="section-label reveal" style="color: var(--accent)">Get In Touch</p>
+          <h2 class="section-title reveal reveal-delay-1">LET'S BUILD<br><span class="highlight">TOGETHER</span></h2>
+          <p class="contact-body reveal reveal-delay-2">
+            Have a project in mind? Our team is ready to turn your vision into reality. Fill in the form or reach us directly — we respond within one business day.
+          </p>
+          <div class="contact-details reveal reveal-delay-3">
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div class="contact-detail-text">
+                <strong>Address</strong>
+               Tamilnadu,Dindigul District<br>Near Railway Station,Palani.624618
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div class="contact-detail-text">
+                <strong>Phone</strong>
+                +91 0000000000
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div class="contact-detail-text">
+                <strong>Email</strong>
+                <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c2aaa7aeaead82abb0adaca1aea3a6efa1adacb1b6b0b7a1b6abadaceca1adaf">[email&#160;protected]</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal reveal-delay-1" id="contact-form" onsubmit="handleFormSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required/>
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Smith" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@company.com" required/>
+          </div>
+          <div class="form-group">
+            <label for="service">Service Type</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>Commercial Construction</option>
+              <option>Residential Development</option>
+              <option>Civil Infrastructure</option>
+              <option>Renovation & Retrofit</option>
+              <option>Design & Engineering</option>
+              <option>Green Building</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project — scope, location, timeline, and budget..."></textarea>
+          </div>
+          <button type="submit" class="form-submit btn">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================
+       FOOTER
+       ================================================ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div>
+          <div class="footer-brand-logo">EMPIRE<span> CO.</span></div>
+          <p class="footer-brand-desc">
+            Building excellence since 2006. Award-winning construction firm delivering landmark residential, commercial, and civil infrastructure projects worldwide.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
+            <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
+            <a href="#" class="social-btn" aria-label="Instagram">ig</a>
+            <a href="#" class="social-btn" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <!-- Services Links -->
+        <div>
+          <p class="footer-col-title">Services</p>
+          <ul class="footer-links">
+            <li><a href="#services">Commercial Build</a></li>
+            <li><a href="#services">Residential</a></li>
+            <li><a href="#services">Civil Works</a></li>
+            <li><a href="#services">Renovation</a></li>
+            <li><a href="#services">Green Building</a></li>
+          </ul>
+        </div>
+        <!-- Company Links -->
+        <div>
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press & Media</a></li>
+          </ul>
+        </div>
+        <!-- Legal -->
+        <div>
+          <p class="footer-col-title">Legal</p>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Safety Standards</a></li>
+            <li><a href="#">Licensing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2024 <span>EMPIRE</span> Construction Co. All rights reserved.
+        </p>
+        <p class="footer-badge">Designed for Portfolio Showcase</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form Toast -->
+  <div id="form-toast">✓ Message sent! We'll be in touch within 24 hours.</div>
+
+  <!-- Back to Top -->
+  <div id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
+
+  <!-- ================================================
+       JAVASCRIPT
+       ================================================ -->
+  <script data-cfasync="false" src="script.js"><script>
+  
+</body>
+</html>
