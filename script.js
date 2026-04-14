@@ -44,17 +44,14 @@
       el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
     });
 
-    /* ================================================
-       PAGE LOADER
+        /* ================================================
+       PAGE LOADER (Removed) - INIT ANIMATIONS
        ================================================ */
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-        document.body.classList.remove('loading');
-        // Trigger hero animations after loader
-        setTimeout(startTyping, 300);
-      }, CONFIG.loaderDelay);
+      // Trigger hero animations immediately after page load
+      setTimeout(startTyping, 300);
     });
+
 
     /* ================================================
        TYPING EFFECT (Hero headline)
